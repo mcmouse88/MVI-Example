@@ -1,4 +1,4 @@
-package com.mcmouse88.mvicomposeexample.ui.theme
+package com.mcmouse88.mvicomposeexample.presentation.res.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
