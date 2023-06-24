@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import com.mcmouse88.mvicomposeexample.domain.model.NoteModel
 import com.mcmouse88.mvicomposeexample.presentation.res.theme.MviComposeExampleTheme
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Composable
@@ -28,6 +29,7 @@ fun NoteItem(
         Random().nextInt(256),
         alpha = 30
     )
+    val date = LocalDate.parse(item.date, DateTimeFormatter.ISO_DATE) ?: LocalDate.now()
     Box(modifier = modifier) {
         Box(
             modifier = Modifier
@@ -51,7 +53,7 @@ fun NoteItem(
                 ) {
                     Text(text = item.author, fontSize = 12.sp, fontWeight = FontWeight.Light)
                     Text(
-                        text = "${item.date.dayOfMonth} ${item.date.month}",
+                        text = "${date.dayOfMonth} ${date.month}",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Light
                     )
@@ -65,10 +67,10 @@ fun NoteItem(
 fun NoteItemPreview() {
     MviComposeExampleTheme {
         val note = NoteModel(
-            id = 1,
+            id = "1",
             title = "title",
             subTitle = "subtitle",
-            date = LocalDate.now(),
+            date = "2023-01-01",
             author = "author"
         )
 

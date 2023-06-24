@@ -1,6 +1,7 @@
 buildscript {
-    val composeVersion by extra("1.3.3")
-    val hiltVersion by extra("2.44.2")
+    dependencies {
+        classpath("com.google.gms:google-services:4.3.15")
+    }
 }
 
 plugins {

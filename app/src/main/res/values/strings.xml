@@ -1,4 +1,13 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MviComposeExample</string>
     <string name="retry">Retry</string>
+    <string name="authorization">Authorization</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="registration">Registration</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="about" tools:ignore="TypographyEllipsis">About ...</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
